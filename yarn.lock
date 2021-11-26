@@ -1940,7 +1940,7 @@
     "combined-stream" "^1.0.8"
     "mime-types" "^2.1.12"
 
-"framer-motion@^4", "framer-motion@3.x || 4.x || 5.x":
+"framer-motion@^4.1.17", "framer-motion@3.x || 4.x || 5.x":
   "integrity" "sha512-thx1wvKzblzbs0XaK2X0G1JuwIdARcoNOW7VVwjO8BUltzXPyONGAElLu6CiCScsOQRI7FIk/45YTFtJw5Yozw=="
   "resolved" "https://mirrors.huaweicloud.com/repository/npm/framer-motion/-/framer-motion-4.1.17.tgz"
   "version" "4.1.17"
@@ -2953,6 +2953,11 @@
     "nanoid" "^3.1.23"
     "source-map" "^0.6.1"
 
+"prism-react-renderer@^1.2.1":
+  "integrity" "sha512-w23ch4f75V1Tnz8DajsYKvY5lF7H1+WvzvLUcF0paFxkTHSp42RS0H5CttdN2Q8RR3DRGZ9v5xD/h3n8C8kGmg=="
+  "resolved" "https://mirrors.huaweicloud.com/repository/npm/prism-react-renderer/-/prism-react-renderer-1.2.1.tgz"
+  "version" "1.2.1"
+
 "process@0.11.10":
   "integrity" "sha1-czIwDoQBYb2j5podHZGn1LwW8YI="
   "resolved" "https://mirrors.huaweicloud.com/repository/npm/process/-/process-0.11.10.tgz"
@@ -3061,6 +3066,11 @@
     "use-callback-ref" "^1.2.5"
     "use-sidecar" "^1.0.5"
 
+"react-intersection-observer@^8.32.5":
+  "integrity" "sha512-4xKdUWRNdPueXXxTyMOV41w6qIa4tsV7BbWOW+IYsvGPP7wxOj9V6o3cKywie+/VDr5Qs7pCzi5Wom78dUxj1w=="
+  "resolved" "https://mirrors.huaweicloud.com/repository/npm/react-intersection-observer/-/react-intersection-observer-8.32.5.tgz"
+  "version" "8.32.5"
+
 "react-is@^16.7.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://mirrors.huaweicloud.com/repository/npm/react-is/-/react-is-16.13.1.tgz"
@@ -3109,7 +3119,7 @@
     "invariant" "^2.2.4"
     "tslib" "^1.0.0"
 
-"react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.13.1 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^17.0.2", "react@^17.0.2 || ^18.0.0", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@>=16.8 || ^17.0.0", "react@>=16.8.0", "react@>=16.8.6", "react@>=16.x <=17.x", "react@17.0.2":
+"react@^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.13.1 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^17.0.2", "react@^17.0.2 || ^18.0.0", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@>=0.14.9", "react@>=16.8 || ^17.0.0", "react@>=16.8.0", "react@>=16.8.6", "react@>=16.x <=17.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://mirrors.huaweicloud.com/repository/npm/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

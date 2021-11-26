@@ -1,25 +1,31 @@
-import { Flex, Text } from "@chakra-ui/layout"
+import { Avatar } from "@chakra-ui/avatar"
+import { VStack, Text, HStack, Container } from "@chakra-ui/layout" 
+import { MDXRemote } from 'next-mdx-remote'
 import dayjs from "dayjs"
-import Link from "next/link"
 import Tags from "./Tags"
+import MDXComponents from "./MDXComponrnt"
 
 export default function Article(props) {
-  const { title, slug, date, des, tags} = props 
+  const { title, date, des, tags, content, author} = props 
+  console.log(author)
 
   return (
-    <Flex direction="column" mt={4} justifyContent="start" >
-      <Link href={`/blog/${slug}`}>
-        <Text fontWeight="bold" fontSize="2xl">
+    <VStack
+      spacing={4}
+      justifyContent="center"
+      alignItems="flex-start">
+        <Text fontSize="4xl" fontWeight="bolder" >
           {title}
         </Text>
-      </Link>
-      <Text fontSize="lg">
-        {dayjs(date).format("YYYY.MM.DD")}
-      </Text>
-      <Tags tags={tags}/>
-      <Text fontSize="lg" color="gray.500">
-        {des}
-      </Text>
-    </Flex>
+        <HStack spacing={0}>
+          <Avatar src={author.image.url} height={10} width={10} mr={2}/>
+          <Text fontSize="lg">{author.name}</Text>
+          <Text fontSize="lg">
+            /{dayjs(date).format("YYYY.MM.DD")}
+          </Text>
+        </HStack>
+        <Tags tags={tags}/>
+        <MDXRemote {...content} components={MDXComponents}/>
+    </VStack>
   )
 }

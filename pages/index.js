@@ -1,6 +1,6 @@
 import { Divider, Flex, Text } from "@chakra-ui/layout"
 import { Container } from "@chakra-ui/react"
-import Article from "../components/Article"
+import ArticleLists from "../components/ArticleLists"
 import { getPosts } from "../lib/data"
 
 export default function Home({ data: { posts} }) {
@@ -13,7 +13,7 @@ export default function Home({ data: { posts} }) {
         {
           posts?.map((post) => {
             return (
-              <Article {...post}/>
+              <ArticleLists {...post}/>
             )
           })
         }
