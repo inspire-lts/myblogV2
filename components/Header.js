@@ -1,11 +1,11 @@
-import { Flex, Heading } from "@chakra-ui/react"
+import { Flex, Heading, Text } from "@chakra-ui/react"
 import NavLink from "./NavLink"
 import SwitchMode from "./SwitchMode"
 
 export default function Header() {
    return (
        <Flex display="flex" justifyContent="center" mt={4}>
-           <Heading mr={10}>LTS</Heading>
+           <Text mr={6} fontSize="3xl">LTS</Text>
            <Flex display="flex">
              <NavLink to={"/"} nav={"首页"} />
              <NavLink to={"/blog"} nav={"博客"} />
