@@ -5,7 +5,7 @@ import { getPost, getPostSlug } from "../../lib/data";
 
 export default function Blog({ post, content }) {
     return (
-        <Container maxW="container.lg" p={6}>
+        <Container maxW="container.sm" p={6}>
             <Article {...post} content={content} />
         </Container>
     )
@@ -24,7 +24,7 @@ export const getStaticPaths = async() => {
 
 export const getStaticProps = async({ params }) => {
     const post = await getPost(params.slug)
-    console.log(post)
+
     return {
         props: {
             post: post.posts[0],

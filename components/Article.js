@@ -3,18 +3,17 @@ import { VStack, Text, HStack, Container } from "@chakra-ui/layout"
 import { MDXRemote } from 'next-mdx-remote'
 import dayjs from "dayjs"
 import Tags from "./Tags"
-import MDXComponents from "./MDXComponrnt"
+import MDXComponents from "./MDXComponent"
 
 export default function Article(props) {
   const { title, date, des, tags, content, author} = props 
-  console.log(author)
 
   return (
     <VStack
       spacing={4}
       justifyContent="center"
       alignItems="flex-start">
-        <Text fontSize="4xl" fontWeight="bolder" >
+        <Text fontSize="2xl" fontWeight="bolder" >
           {title}
         </Text>
         <HStack spacing={0}>

@@ -4,14 +4,14 @@ import ArticleLists from "../components/ArticleLists"
 import { getPosts } from "../lib/data"
 
 export default function Home({ data: { posts} }) {
-  
+  const recentPosts = posts.slice(0, 3)
   return (
-    <Container maxW="container.lg" p={4}>
-      <Text fontSize="3xl">近期文章</Text>
+    <Container maxW="container.sm" p={4}>
+      <Text fontSize="2xl">近期文章</Text>
       <Divider/>
       <Flex justifyContent="center" direction="column">
         {
-          posts?.map((post) => {
+          recentPosts?.map((post) => {
             return (
               <ArticleLists {...post}/>
             )

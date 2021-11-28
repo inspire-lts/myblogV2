@@ -1,5 +1,6 @@
 import NextLink from "next/link";
 import NextImage from "next/image";
+import { useState, useEffect } from "react";
 import {
   Box,
   Text,
@@ -12,9 +13,13 @@ import {
   ListItem,
   Link,
   useColorModeValue,
-  Code,
-  useColorMode
+  useColorMode,
+  Container,
+  Button
 } from "@chakra-ui/react";
+import { PrismLight as SyntaxHighlighter} from 'react-syntax-highlighter';
+import { atomDark  } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import CopyToClipboard from "react-copy-to-clipboard";
 
 
 const Image = (props) => {
@@ -62,7 +67,15 @@ const CustomLink = (props) => {
 };
 
 const MDXComponents =() =>{
-  const { colorMode } = useColorMode();
+  const [isCopied, setIsCopied] = useState(false)
+  const {colorMode} = useColorMode()
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsCopied(false), 2000)
+  
+    return () => clearTimeout(timer)
+  }, [isCopied])
+  
 
   return (
     {
@@ -71,9 +84,31 @@ const MDXComponents =() =>{
       h3: (props) => <Heading fontWeight="normal" as="h4" size="md" my="15px" {...props} />,
       h4: (props) => <Heading fontWeight="normal" as="h5" size="sm" my="15px" {...props} />,
       strong: (props) => <Text as="strong" fontWeight="bold" {...props} />,
-      code: (props) => (
-        <Code color={colorMode === "light" ? "black" : "white"} fontSize="lg" {...props}/>
-      ),
+      code: (props) => {
+  
+        return (
+          <Container maxW="container.md" position="relative">
+            <Text bg="orange"  position="absolute" top="-8px" left="30px">{props.className}</Text>
+            <CopyToClipboard 
+              text={props.children}
+              onCopy={() => setIsCopied(true)}>
+              <Button 
+                size="xs"
+                top="-8px"
+                position="absolute"
+                right="40px"
+                color={colorMode === "light" ? "black" : "white"}
+                >
+                  {isCopied ? "Copied" : "Copy"}
+                </Button>
+            </CopyToClipboard>
+            <SyntaxHighlighter language="javascript" style={atomDark} >
+              {props.children}
+            </SyntaxHighlighter>
+          </Container>
+        )
+
+      },
       kbd: Kbd,
       blockquote: BlockQuote,
       p: (props) => <Text as="p" my="15px" {...props} />,
