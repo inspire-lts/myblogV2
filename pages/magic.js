@@ -1,5 +1,13 @@
+import { Container, Text } from "@chakra-ui/layout"
+import Project from "../components/Project"
+
 export default function Magic() {
   return (
-    <h1>实验室</h1>
+    <Container
+      maxW="container.sm">
+        <Project
+          title="change your face"
+          detail="换脸"/>
+      </Container>
   )
 }

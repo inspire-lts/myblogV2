@@ -18,7 +18,7 @@ import {
   Button
 } from "@chakra-ui/react";
 import { PrismLight as SyntaxHighlighter} from 'react-syntax-highlighter';
-import { atomDark  } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { atomDark, prism  } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import CopyToClipboard from "react-copy-to-clipboard";
 
 
@@ -87,7 +87,7 @@ const MDXComponents =() =>{
       code: (props) => {
   
         return (
-          <Container maxW="container.md" position="relative">
+          <Container position="relative">
             <Text bg="orange"  position="absolute" top="-8px" left="30px">{props.className}</Text>
             <CopyToClipboard 
               text={props.children}
@@ -102,7 +102,7 @@ const MDXComponents =() =>{
                   {isCopied ? "Copied" : "Copy"}
                 </Button>
             </CopyToClipboard>
-            <SyntaxHighlighter language="javascript" style={atomDark} >
+            <SyntaxHighlighter language="javascript" style={colorMode === "dark" ? atomDark : prism} >
               {props.children}
             </SyntaxHighlighter>
           </Container>
