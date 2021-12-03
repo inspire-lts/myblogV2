@@ -10,7 +10,6 @@ export default function Header() {
              <NavLink to={"/"} nav={"首页"} />
              <NavLink to={"/blog"} nav={"博客"} />
              <NavLink to={"/resume"} nav={"自己"} />
-             <NavLink to="/magic" nav="实验室" />
              <SwitchMode/>
            </Flex>
        </Flex>

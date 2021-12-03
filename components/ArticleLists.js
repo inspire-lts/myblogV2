@@ -11,7 +11,7 @@ export default function Article(props) {
     <Animation>
       <Flex direction="column" mt={4} justifyContent="start" >
         <Link href={`/blog/${slug}`}>
-          <Text fontWeight="bold" fontSize="xl">
+          <Text fontWeight="bold" fontSize="xl" _hover={{color: "blue.400", cursor: "pointer"}}>
             {title}
           </Text>
         </Link>

@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/layout";
+import { Container, Link, Text } from "@chakra-ui/layout";
 import { serialize } from 'next-mdx-remote/serialize'
 import Article from "../../components/Article";
 import { getPost, getPostSlug } from "../../lib/data";
@@ -7,7 +7,15 @@ export default function Blog({ post, content }) {
     return (
         <Container maxW="container.sm" p={6}>
             <Article {...post} content={content} />
+            <Link href="/blog">
+                <Text
+                    mt={5}
+                    color="blue.500">
+                    返回主页
+                </Text>
+            </Link>
         </Container>
+        
     )
 }
 
