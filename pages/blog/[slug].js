@@ -10,7 +10,7 @@ export default function Blog({ post, content }) {
             <Link href="/blog">
                 <Text
                     mt={5}
-                    color="blue.500">
+                    color="red.600">
                     返回主页
                 </Text>
             </Link>
