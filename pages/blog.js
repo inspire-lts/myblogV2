@@ -33,7 +33,7 @@ export default function Home({ data: { posts}, tags }) {
         {
           filterPosts?.map((post) => {
             return (
-              <ArticleLists {...post}/>
+              <ArticleLists {...post} key={post}/>
             )
           })
         }

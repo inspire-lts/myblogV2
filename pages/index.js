@@ -29,7 +29,7 @@ export default function Home({ data: { posts} }) {
         {
           recentPosts?.map((post) => {
             return (
-              <ArticleLists {...post}/>
+              <ArticleLists {...post} key={post}/>
             )
           })
         }

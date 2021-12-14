@@ -1,12 +1,23 @@
 import { Container, Link, Text } from "@chakra-ui/layout";
 import { serialize } from 'next-mdx-remote/serialize'
 import Article from "../../components/Article";
+import { Giscus } from "@giscus/react"
 import { getPost, getPostSlug } from "../../lib/data";
 
 export default function Blog({ post, content }) {
     return (
         <Container maxW="container.sm" p={6}>
             <Article {...post} content={content} />
+            <Giscus
+                repo="inspire-lts/myblogV2"
+                repoId="R_kgDOGcK1GA"
+                category="Announcements"
+                categoryId="DIC_kwDOGcK1GM4CARvA"
+                mapping="url"
+                reactionsEnabled="1"
+                emitMetadata="0"
+                theme="light"
+            />
             <Link href="/blog">
                 <Text
                     mt={5}
