@@ -79,10 +79,10 @@ const MDXComponents =() =>{
 
   return (
     {
-      h1: (props) => <Heading fontWeight="normal" as="h2" size="xl" my="15px" {...props} />,
-      h2: (props) => <Heading fontWeight="normal" as="h3" size="lg" my="15px" {...props} />,
-      h3: (props) => <Heading fontWeight="normal" as="h4" size="md" my="15px" {...props} />,
-      h4: (props) => <Heading fontWeight="normal" as="h5" size="sm" my="15px" {...props} />,
+      h1: (props) => <Heading fontWeight="bold" fontWeight="normal" as="h2" size="xl" my="15px" {...props} />,
+      h2: (props) => <Heading fontWeight="bold" as="h3" size="lg" my="15px" {...props} />,
+      h3: (props) => <Heading fontWeight="bold" as="h4" size="md" my="15px" {...props} />,
+      h4: (props) => <Heading fontWeight="bold" as="h5" size="sm" my="15px" {...props} />,
       strong: (props) => <Text as="strong" fontWeight="bold" {...props} />,
       code: (props) => {
   
