@@ -10,9 +10,9 @@ export default function Home({ data: { posts } }) {
     <Container maxW="container.sm" p={4}>
       <HStack justifyContent="center">
         <Box p={5}>
-          <Heading as="h2" variant="page-title">
+          <Text fontSize={"2xl"} fontWeight="bold" >
             小炒肉
-          </Heading>
+          </Text>
           <p>前端练习生 🧐 前端开发者</p>
         </Box>
         <Image
@@ -26,7 +26,7 @@ export default function Home({ data: { posts } }) {
           alt="Profile image"
         />
       </HStack>
-      <Text fontSize="2xl">近期文章</Text>
+      <Text fontSize="xl">近期文章</Text>
       <Divider />
       <Flex justifyContent="center" direction="column">
         {recentPosts?.map((post) => {
