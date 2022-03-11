@@ -9,22 +9,12 @@ export default function Home({ data: { posts } }) {
   return (
     <Container maxW="container.sm" p={4}>
       <HStack justifyContent="center">
-        <Box p={5}>
-          <Text fontSize={"2xl"} fontWeight="bold" >
-            小炒肉
+        <Box p={5} >
+          <Text fontSize={"3xl"} fontWeight="bold" textAlign={"center"} >
+            LTS
           </Text>
           <p>前端练习生 🧐 前端开发者</p>
         </Box>
-        <Image
-          borderColor="whiteAlpha.800"
-          borderWidth={2}
-          borderStyle="solid"
-          maxWidth="100px"
-          display="inline-block"
-          borderRadius="full"
-          src={recentPosts[0].author.image.url}
-          alt="Profile image"
-        />
       </HStack>
       <Text fontSize="xl">近期文章</Text>
       <Divider />
