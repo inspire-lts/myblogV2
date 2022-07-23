@@ -1,5 +1,5 @@
 import { Divider, Flex, Heading, HStack, Text, Box } from "@chakra-ui/layout";
-import { Container, Image } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 import ArticleLists from "../components/ArticleLists";
 import { getPosts } from "../lib/data";
 
